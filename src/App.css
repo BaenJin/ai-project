@@ -1,0 +1,182 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* 차분하고 통일감 있는 청첩장 스타일 */
+.invitation-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7f3ef 0%, #fff6e9 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+.invitation-header.wedding-header-bg {
+  background: linear-gradient(180deg, #f7f3ef 0%, #fff6e9 100%);
+  padding: 48px 24px 28px 24px;
+  text-align: center;
+  border-radius: 24px 24px 0 0;
+  border-bottom: 1.5px solid #e5d7b8;
+  position: relative;
+}
+.wedding-names {
+  font-family: 'Quicksand', 'Noto Sans KR', sans-serif;
+  font-size: 2.3rem;
+  color: #bfa382;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+.wedding-date {
+  font-size: 1.18rem;
+  color: #a68b6d;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.wedding-venue {
+  font-size: 1.08rem;
+  color: #7a6a3a;
+  margin-bottom: 0;
+}
+.invitation-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(191,163,130,0.08), 0 1.5px 8px rgba(166,139,109,0.06);
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 420px;
+  padding: 0 0 32px 0;
+  overflow: hidden;
+  border: 1.5px solid #e5d7b8;
+}
+.invitation-section {
+  padding: 32px 24px 0 24px;
+  border-bottom: 1px solid #f0e7db;
+}
+.invitation-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.invitation-message {
+  font-size: 1.08rem;
+  color: #7a6a3a;
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: 'Noto Sans KR', 'Quicksand', sans-serif;
+}
+.form-card.invitation-form .form-group label {
+  color: #a68b6d;
+}
+.form-card.invitation-form input,
+.form-card.invitation-form textarea,
+.form-card.invitation-form select {
+  background: #f7f3ef;
+  border: 1.5px solid #e5d7b8;
+  color: #7a6a3a;
+}
+.form-card.invitation-form input:focus,
+.form-card.invitation-form textarea:focus,
+.form-card.invitation-form select:focus {
+  outline: 2px solid #bfa382;
+  border-color: #bfa382;
+}
+.form-card.invitation-form button[type="submit"] {
+  background: linear-gradient(90deg, #bfa382 60%, #a68b6d 100%);
+  color: #fff;
+  font-family: 'Quicksand', 'Noto Sans KR', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(191,163,130,0.08);
+  border: none;
+  margin-top: 12px;
+}
+.form-card.invitation-form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #a68b6d 60%, #bfa382 100%);
+}
+.photo-preview-list {
+  gap: 1rem;
+}
+.photo-preview {
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(191,163,130,0.10);
+}
+.photo-preview button {
+  background: #fff;
+  color: #a68b6d;
+  border: 1.5px solid #a68b6d;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(191,163,130,0.08);
+  padding: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.photo-preview button:hover {
+  background: #a68b6d;
+  color: #fff;
+}
+.main-nav {
+  font-family: 'Quicksand', 'Noto Sans KR', sans-serif;
+  font-size: 1.1rem;
+  color: #a68b6d;
+  background: #fff6e9;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(191,163,130,0.07);
+  padding: 0.7em 2em;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  display: inline-block;
+}
+.main-nav a {
+  color: #bfa382;
+  font-weight: 700;
+  margin: 0 0.5em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: #a68b6d;
+}
