@@ -28,8 +28,18 @@ const InvitationForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // supabase insert
-    const { error } = await supabase.from('invitations').insert([form]);
+    // date와 time을 합쳐 wedding_date(ISO 문자열)로 변환
+    const wedding_date = form.date && form.time ? new Date(`${form.date}T${form.time}`).toISOString() : null;
+    const insertData = {
+      groom_name: form.groom,
+      bride_name: form.bride,
+      wedding_date,
+      venue: form.venue,
+      contact: form.contact,
+      message: form.message,
+      style: form.template,
+    };
+    const { error } = await supabase.from('invitations').insert([insertData]);
     if (error) {
       alert('저장 중 오류가 발생했습니다: ' + error.message);
     } else {
