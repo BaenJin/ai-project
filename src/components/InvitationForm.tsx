@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PhotoUploader from './PhotoUploader';
+import { supabase } from '../supabaseClient';
 
 const templateOptions = [
   { value: 'classic', label: '클래식' },
@@ -25,9 +26,15 @@ const InvitationForm: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('청첩장 정보가 저장되었습니다!');
+    // supabase insert
+    const { error } = await supabase.from('invitations').insert([form]);
+    if (error) {
+      alert('저장 중 오류가 발생했습니다: ' + error.message);
+    } else {
+      alert('청첩장 정보가 저장되었습니다!');
+    }
   };
 
   return (
